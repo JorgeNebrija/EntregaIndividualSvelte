@@ -233,3 +233,57 @@ button {
   border: none;
   cursor: pointer;
 }
+body.dark-mode {
+  background-color: #121212; /* Fondo oscuro */
+  color: #e4e4e4; /* Texto claro */
+}
+
+body.dark-mode h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .Clase-Perfil {
+  background-color: #1e1e1e; /* Fondo de perfil en modo oscuro */
+  color: #ffffff;
+}
+
+body.dark-mode .informacion {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  border-top: 1px solid #444;
+}
+
+body.dark-mode .ventana-edicion {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: #e4e4e4;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}
+
+body.dark-mode input {
+  background-color: #333;
+  color: #e4e4e4;
+  border-bottom: 1px solid #555;
+}
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .ventana-edicion,
+body.dark-mode .Clase-Perfil,
+body.dark-mode .informacion,
+body.dark-mode .navbar {
+  transition: background-color 0.3s, color 0.3s;
+}
+

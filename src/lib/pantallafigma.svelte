@@ -34,9 +34,27 @@
     pantallaPerfil[6].ubicacion = newUbicacion;
     editInfo = false; // Cierra la ventana de edición
   }
+
+  // Variable para el estado del modo oscuro
+  let darkMode = false;
+
+  // Alternar el modo oscuro
+  function toggleDarkMode() {
+    darkMode = !darkMode;
+    document.body.classList.toggle('dark-mode', darkMode);
+  }
+
+
 </script>
 
-<h1>{pantallaPerfil[0].titulo}</h1>
+<h1>{pantallaPerfil[0].titulo}
+  <div class="dark-mode-toggle">
+    <button on:click={toggleDarkMode} aria-label="Alternar Modo Oscuro">
+      {darkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
+    </button>
+  </div>
+
+</h1>
 <div class="section-principal">
   <!-- Clase-Perfil -->
   <div class="Clase-Perfil">
