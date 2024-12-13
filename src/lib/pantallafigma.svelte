@@ -39,23 +39,23 @@
   let darkMode = false;
 
   // Alternar el modo oscuro
-  function toggleDarkMode() {
+function toggleDarkMode() {
     darkMode = !darkMode;
     document.body.classList.toggle('dark-mode', darkMode);
-  }
+}
+
 
 
 </script>
-
 <h1>{pantallaPerfil[0].titulo}
-  <div class="dark-mode-toggle">
-    <button on:click={toggleDarkMode} aria-label="Alternar Modo Oscuro">
-      {darkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
-    </button>
-  </div>
 
+<div class="dark-mode-toggle">
+  <button on:click={toggleDarkMode} >
+    {darkMode ? '☀️ ' : '🌙 '}
+  </button>
+</div>
 </h1>
-<div class="section-principal">
+<div class={`section-principal ${darkMode ? 'dark' : 'light'}`}>
   <!-- Clase-Perfil -->
   <div class="Clase-Perfil">
     <img src="/img/usuario.png" alt="" width="45" height="45" />
@@ -64,11 +64,11 @@
       <p>{pantallaPerfil[2].rol}</p>
     </div>
     <!-- Botón para editar el rol -->
-    <button 
-      aria-label="Editar Rol" 
-      on:click={() => editRol = true} 
+    <button
+      on:click={() => editRol = true}
       on:keydown={(e) => e.key === 'Enter' && (editRol = true)}
-      tabindex="0">
+      tabindex="0"
+    >
       <img src="/img/editar-texto.png" alt="Editar rol" width="25" height="25" />
     </button>
   </div>
@@ -88,11 +88,12 @@
     <p>{pantallaPerfil[3].textoinf}</p>
     <div class="imginfo">
       <!-- Botón para editar la información -->
-      <button 
-        aria-label="Editar Información" 
-        on:click={() => editInfo = true} 
+      <button
+        aria-label="Editar Información"
+        on:click={() => editInfo = true}
         on:keydown={(e) => e.key === 'Enter' && (editInfo = true)}
-        tabindex="0">
+        tabindex="0"
+      >
         <img src="/img/editar-texto.png" alt="Editar información" width="25" height="25" />
       </button>
     </div>
@@ -135,4 +136,3 @@
     <img src="/img/image3.png" alt="Perfil" width="25" height="25" />
   </div>
 </div>
-
